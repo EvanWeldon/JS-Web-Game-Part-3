@@ -1,3 +1,20 @@
+function move(image){
+    image.style.position = 'fixed'
+    
+    function moveToCoordinates(left, bottom){
+        image.style.left = left + 'px'
+        image.style.bottom = bottom + 'px'
+    }
+
+    return {
+        to: moveToCoordinates
+    }
+}
+let greenCharacter = newImage('assets/green-character.gif')
+move(greenCharacter)
+
+
+
 function newImage(url, left, bottom){
     let image = document.createElement('img')
     image.src = url
